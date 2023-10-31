@@ -8,7 +8,7 @@ class VisitorManagementSystem(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Visitor Management System")
-        self.geometry("1600x800+0+0")
+        self.geometry("1425x775")
         self.resizable(False, False)
         self.style = ttk.Style()
         self.tk.call("source", "forest-dark.tcl")
@@ -37,7 +37,7 @@ class VisitorManagementSystem(tk.Tk):
         )
 
         Registration_Frame = tk.Frame(bd=4)
-        Registration_Frame.place(x=60, y=40, width=900, height=900)
+        Registration_Frame.place(x=25, y=20, width=800, height=900)
 
         m_title = tk.Label(
             Registration_Frame,
@@ -52,33 +52,33 @@ class VisitorManagementSystem(tk.Tk):
         )
 
         lbl_name = tk.Label(
-            Registration_Frame, text="Name", font=("Montserrat", 14), fg="white"
+            Registration_Frame, text="Name", font=("Montserrat", 12), fg="white"
         )
         lbl_name.grid(row=1, column=0, pady=10, padx=20, sticky="w")
 
         txt_name = ttk.Entry(
             Registration_Frame,
             textvariable=self.name,
-            font=("Montserrat", 12),
+            font=("Montserrat", 10),
             width=20,
         )
         txt_name.grid(row=1, column=1, pady=20, sticky="w")
 
         lbl_phone = tk.Label(
-            Registration_Frame, text="Phone number", font=("Montserrat", 14), fg="white"
+            Registration_Frame, text="Phone number", font=("Montserrat", 12), fg="white"
         )
         lbl_phone.grid(row=2, column=0, pady=10, padx=20, sticky="w")
 
         txt_phone = ttk.Entry(
             Registration_Frame,
             textvariable=self.phone,
-            font=("Montserrat", 12),
+            font=("Montserrat", 10),
             width=20,
         )
         txt_phone.grid(row=2, column=1, pady=20, sticky="w")
 
         lbl_address = tk.Label(
-            Registration_Frame, text="Address", font=("Montserrat", 14), fg="white"
+            Registration_Frame, text="Address", font=("Montserrat", 12), fg="white"
         )
 
         lbl_address.grid(row=3, column=0, pady=10, padx=18, sticky="w")
@@ -93,7 +93,7 @@ class VisitorManagementSystem(tk.Tk):
             highlightbackground="#595959",
             highlightcolor="#595959",
         )
-        txt_address.configure(font=("Montserrat", 12))
+        txt_address.configure(font=("Montserrat", 10))
         txt_address.bind(
             "<FocusIn>",
             lambda e: txt_address.config(
@@ -112,36 +112,36 @@ class VisitorManagementSystem(tk.Tk):
         txt_address.grid(row=3, column=1, padx=6, pady=20, sticky="w")
 
         lbl_visitor = tk.Label(
-            Registration_Frame, text="Visiting", font=("Montserrat", 14), fg="white"
+            Registration_Frame, text="Visiting", font=("Montserrat", 12), fg="white"
         )
         lbl_visitor.grid(row=4, column=0, pady=10, padx=20, sticky="w")
 
         txt_visitor = ttk.Entry(
             Registration_Frame,
             textvariable=self.visiting,
-            font=("Montserrat", 12),
+            font=("Montserrat", 10),
             width=20,
         )
         txt_visitor.grid(row=4, column=1, pady=20, sticky="w")
 
         lbl_purpose = tk.Label(
-            Registration_Frame, text="Purpose", font=("Montserrat", 14), fg="white"
+            Registration_Frame, text="Purpose", font=("Montserrat", 12), fg="white"
         )
         lbl_purpose.grid(row=5, column=0, pady=10, padx=20, sticky="w")
 
         txt_purpose = ttk.Entry(
             Registration_Frame,
             textvariable=self.purpose,
-            font=("Montserrat", 12),
+            font=("Montserrat", 10),
             width=20,
         )
         txt_purpose.grid(row=5, column=1, pady=20, sticky="w")
 
         btn_frame = tk.Frame(Registration_Frame, bd=4)
-        btn_frame.place(x=10, y=600, width=500)
+        btn_frame.place(x=10, y=600, width=450)
         btn_frame.grid_columnconfigure(0, weight=1)
 
-        self.style.configure("Accent.TButton", font=("Montserrat", 12))
+        self.style.configure("Accent.TButton", font=("Montserrat", 10))
         accentbutton = ttk.Button(
             btn_frame,
             text="Register",
@@ -154,23 +154,23 @@ class VisitorManagementSystem(tk.Tk):
         title = tk.Label(
             text="Developed By Adish and Harsh",
             bd=3,
-            font=("Montserrat", 14),
+            font=("Montserrat", 12),
             fg="grey",
         )
         title.pack(side=tk.BOTTOM, fill=tk.X)
 
         self.style.configure(
-            "TLabelframe.Label", font=("Montserrat", 12), foreground="#fff"
+            "TLabelframe.Label", font=("Montserrat", 10), foreground="#fff"
         )
         Detail_Frame = ttk.LabelFrame(text="Details")
-        Detail_Frame.place(x=600, y=100, width=920, height=600)
+        Detail_Frame.place(x=525, y=80, width=850, height=600)
 
         lbl_search = tk.Label(
-            Detail_Frame, text="Search By", font=("Montserrat", 14), fg="white"
+            Detail_Frame, text="Search By", font=("Montserrat", 12), fg="white"
         )
         lbl_search.grid(row=0, column=0, pady=10, padx=20, sticky="w")
 
-        self.style.configure("Accent.TCombobox", font=("Montserrat", 12), height=3)
+        self.style.configure("Accent.TCombobox", font=("Montserrat", 10), height=3)
 
         combo_search = ttk.Combobox(
             Detail_Frame,
@@ -186,7 +186,7 @@ class VisitorManagementSystem(tk.Tk):
         txt_search = ttk.Entry(
             Detail_Frame,
             textvariable=self.search_text,
-            font=("Montserrat", 12),
+            font=("Montserrat", 10),
             width=12,
         )
         txt_search.grid(row=0, column=2, pady=10, padx=20, sticky="w")
@@ -199,7 +199,7 @@ class VisitorManagementSystem(tk.Tk):
             style="Accent.TButton",
         ).grid(row=0, column=3, padx=10, pady=10)
 
-        self.style.configure("TButton", font=("Montserrat", 12))
+        self.style.configure("TButton", font=("Montserrat", 10))
 
         refreshbtn = ttk.Button(
             Detail_Frame,
@@ -216,7 +216,7 @@ class VisitorManagementSystem(tk.Tk):
         ).grid(row=0, column=5, padx=5, pady=10)
 
         Table_Frame = tk.Frame(Detail_Frame, bd=4)
-        Table_Frame.place(x=10, y=80, width=900, height=480)
+        Table_Frame.place(x=10, y=80, width=830, height=480)
 
         scroll_x = ttk.Scrollbar(Table_Frame, orient=tk.HORIZONTAL)
         scroll_y = ttk.Scrollbar(Table_Frame, orient=tk.VERTICAL)
